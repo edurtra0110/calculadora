@@ -12,19 +12,19 @@ function resetearCalculadora() {
 
 //Función que reinicializa los valores de las variables a su estado original.
 function resetearVariables() {
-    // **TODO: ** Resetear el valor de las variable `valorEnPantalla`
+ 
     valorEnPantalla = "";
-    // **TODO: ** Resetear el valor de las variable `operando1`
+    
     operando1 = null;
-    // **TODO: ** Resetear el valor de las variable `operando2`
+   
     operando2 = null;
-    // **TODO: ** Resetear el valor de las variable `operador`
+ 
     operador = ""; //Puede ser +, -, *, /
 }
 
 //Función que actualiza el display (pantalla) de la calculadora.
 function actualizarDisplay() {
-    // **TODO: ** Asignarle al elemento HTML "display" el valor de la variable `valorEnPantalla`
+   
     document.getElementById("display").innerHTML="valorEnPantalla"
 }
 
@@ -52,14 +52,20 @@ function calcular() {
 
     // ** TODO ** Controlar que el código de esta función solo se ejecute si la variable `operando1` tiene algún valor, es decir, si es distinto de "null"
         // ** TODO ** Asignarle a la variable `operando2` el valor de la variable `valorEnPantalla`
-        // ** TODO ** Usar una estructura "según" o "switch" para que haga una operación u otra según el valor de la variable `operador`
-            // ** TODO ** Caso de que el operador sea "+":
-                // ** TODO ** Que sume los dos operandos y el resultado se guarde en la variable `valorEnPantalla`
-            // ** TODO ** Caso de que el operador sea "-": 
-                // ** TODO ** Que al operando1 se le reste operando2 y el resultado se guarde en la variable `valorEnPantalla`
-            // ** TODO ** Caso de que el operador sea "*": 
-                // ** TODO ** Que multiplique los operandos y el resultado se guarde en la variable `valorEnPantalla`
-            // ** TODO ** Caso de que el operador sea "/": 
+       switch(operador) {
+             case "+":
+                 alert(Que sume los dos operandos y el resultado se guarde en la variable `valorEnPantalla`)
+                 break;
+             case "-":
+                 alert (Que al operando1 se le reste operando2 y el resultado se guarde en la variable `valorEnPantalla`)
+                 break;
+             case "*":
+                 alert(Que multiplique los operandos y el resultado se guarde en la variable `valorEnPantalla`)
+                 break;
+             case "/":
+                 alert(Que al operando1 se le divida el operando2 y el resultado se guarde en la variable `valorEnPantalla`)
+                 break;
+           
                 // ** TODO ** Que al operando1 se le divida el operando2 y el resultado se guarde en la variable `valorEnPantalla`
                 // ** TODO (varias líneas) ** Controlar que la división no se haga si `operando2` es "0" y mostrar un mensaje que diga "¡No se puede dividir entre 0!" en el display
                 
