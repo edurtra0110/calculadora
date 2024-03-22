@@ -42,11 +42,8 @@ function operadorPulsado(symbol) {
 
 //Función que se ejecuta cuando se pulsa el botón calcular (=). Muestra el resultado en el display
 function calcular() {
-    //PISTA: Fíjate que los comentarios están tabulados. Eso quiere decir hay código dentro de alguna estructura. Borra esta línea también
-
-    // ** TODO ** Controlar que el código de esta función solo se ejecute si la variable `operando1` tiene algún valor, es decir, si es distinto de "null"
-     if (operador != ""){
-         
+    if (operador != ""){
+      operando2 = parseInt(valorEnPantalla);
        switch(operador) {
              case "+":
                valorEnPantalla = operando1 + operando2;
@@ -62,11 +59,8 @@ function calcular() {
                  break;
        }
      }
-         
                 // ** TODO (varias líneas) ** Controlar que la división no se haga si `operando2` es "0" y mostrar un mensaje que diga "¡No se puede dividir entre 0!" en el display
                 
-        // ** TODO ** Llegados aquí, la operación ya debe estar hecha y almacenada en `valorEnPantalla`. Actualizar el display llamando a la función que lo hace
                actualizarDisplay();
-        // ** TODO ** Llegados aquí, el resultado ya debe mostrarse en el display. Resetear las variables llamando a la función que lo hace. 
                resetearVariables();
 } 
