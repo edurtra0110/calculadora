@@ -24,7 +24,7 @@ function resetearVariables() {
 
 //Función que actualiza el display (pantalla) de la calculadora.
 function actualizarDisplay() {
-    document.getElementById("display").innerHTML= valorEnPantalla;
+    document.getElementById("display").value= valorEnPantalla;
 }
 
 //Función que se ejecuta cuando se pulsa en un número. Agrega el número pulsado al número que hay en el display
@@ -54,13 +54,15 @@ function calcular() {
              case "*":
                  valorEnPantalla = operando1 * operando2;
                  break;
-             case "/":
+             case "/":{
                  valorEnPantalla = operando1 / operando2;
                  break;
-       }
-     }
-                // ** TODO (varias líneas) ** Controlar que la división no se haga si `operando2` es "0" y mostrar un mensaje que diga "¡No se puede dividir entre 0!" en el display
-                
+                if (operador != ""){
+            operando2 = parseInt(0);
+           "¡No se puede dividir entre 0!";
                actualizarDisplay();
                resetearVariables();
-} 
+                }
+       }
+     } 
+}
