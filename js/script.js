@@ -57,9 +57,11 @@ function calcular() {
              case "/":{
                  valorEnPantalla = operando1 / operando2;
                  break;
-                if (operador != ""){
-            operando2 = parseInt(0);
-           "¡No se puede dividir entre 0!";
+                if (operando2 == 0){
+           valorEnPantalla = "No se puede dividir entre 0";
+                    }
+                 break;
+             }
                actualizarDisplay();
                resetearVariables();
                 }
