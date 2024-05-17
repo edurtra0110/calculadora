@@ -56,15 +56,14 @@ function calcular() {
                  break;
              case "/":{
                  valorEnPantalla = operando1 / operando2;
-                 break;
+                 
                 if (operando2 == 0){
            valorEnPantalla = "No se puede dividir entre 0";
                     }
                  break;
              }
+            }
                actualizarDisplay();
                resetearVariables();
                 }
        }
-     } 
-}
